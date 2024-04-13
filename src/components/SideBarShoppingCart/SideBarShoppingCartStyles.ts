@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const SidebarNav = styled(motion.nav)<{ isOpen: boolean }>`
   background: #0f52ba;
-  width: 90%; /* Cobrir 80% da tela em telas pequenas */
+  width: 90%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,9 +15,13 @@ export const SidebarNav = styled(motion.nav)<{ isOpen: boolean }>`
   padding-top: 20px;
   box-shadow: ${({ isOpen }) =>
     isOpen ? "0px 0px 20px rgba(0, 0, 0, 0.2)" : "none"};
-
+  
   @media (min-width: 768px) {
-    width: 60%; /* Reduzir para 60% da tela em tablets */
+    width: 60%;
+  }
+
+  @media (max-width: 768px) {
+    overflow-y: auto;
   }
 `;
 
@@ -81,4 +85,16 @@ export const MessageAdd = styled.h1`
   justify-content: center;
   color: white;
   margin-top: 200px;
+`;
+export const FinishOrderButton = styled.button`
+  background: #000000;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  width: 100%;
+  padding: 15px 0;
+  position: sticky;
+  bottom: 0;
+  
 `;

@@ -1,6 +1,7 @@
 import useSidebar from "@/contexts/SideBarContext";
 import {
   CloseButton,
+  FinishOrderButton,
   MessageAdd,
   SidebarHeader,
   SidebarNav,
@@ -68,6 +69,7 @@ export default function SideBarShoppingCart() {
             <TotalValue>R$ {totalPrice.toFixed(2)}</TotalValue>
           </Total>
         )}
+        <FinishOrderButton>FINALIZAR PEDIDO</FinishOrderButton>
       </SidebarWrap>
     </SidebarNav>
   );
