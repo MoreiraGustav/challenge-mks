@@ -64,12 +64,14 @@ export default function SideBarShoppingCart() {
         )}
 
         {cartItems.length > 0 && (
-          <Total>
-            <TotalTitle>Total:</TotalTitle>
-            <TotalValue>R$ {totalPrice.toFixed(2)}</TotalValue>
-          </Total>
+          <>
+            <Total>
+              <TotalTitle>Total:</TotalTitle>
+              <TotalValue>R$ {totalPrice.toFixed(2)}</TotalValue>
+            </Total>
+            <FinishOrderButton>FINALIZAR PEDIDO</FinishOrderButton>
+          </>
         )}
-        <FinishOrderButton>FINALIZAR PEDIDO</FinishOrderButton>
       </SidebarWrap>
     </SidebarNav>
   );
